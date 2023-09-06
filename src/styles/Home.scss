@@ -1,0 +1,185 @@
+@import "colors.scss";
+
+
+.home{
+    height: 100vh;
+    width: 100%;
+    background-color: $second;
+    // border-radius: 0px 0px 200px 200px;
+
+    >main{
+        position: absolute;
+        text-transform: uppercase;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 2rem;
+
+        h1{
+            font: 400 6rem $text1;
+            color: $first;
+        }
+        p{
+            font: 900 1rem $text1;
+            color: $first;
+        }
+    }
+
+    &::before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: no-repeat center/auto url('../assets/1-2.png');
+        filter: blur(5px);
+        border-radius: 0px 0px 200px 200px;
+    }
+}
+
+.home2{
+    height: 100vh;
+    width: 100%;
+    background-color: $second;
+    padding: 500px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: -200px;
+
+    >img{
+        width: 30%;
+        animation-name: imgUp;
+        animation-duration: 0.7s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-direction: alternate;
+    }
+    div{
+        width: 50%;
+        padding: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        
+        p{
+            color: $first;
+            letter-spacing: 2px;
+            word-spacing: 2px;
+            font: 100 1.2rem $text2;
+        }
+    }
+    
+}
+@keyframes imgUp {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+.home3{
+    width: 100%;
+    height: 120vh;
+    background-color: $second;
+    margin-top: -200px;
+    display: flex;
+    div{
+        width: 70%;
+        height: 100vh;
+        background-color: $first;
+        border-radius: 0px 200px 200px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+
+        h1{
+            text-transform: uppercase;
+            padding: 0.5rem;
+            border-bottom: 2px solid $dark;
+            color: $dark;
+            width: 15rem;
+            text-align: center;
+        }
+
+        p{
+            padding: 3rem;
+            letter-spacing: 1px;
+            word-spacing: 5px;
+            line-height: 170%;
+            font-weight: 100;
+            color: $dark;
+            font-size: 1.2rem;
+        }
+    }
+}
+.home4{
+    width: 100%;
+    height: 100vh;
+    background-color: $second;
+    display: flex;
+    justify-content: flex-end;
+
+    div{
+        width: 70%;
+        height: 70vh;
+        background-color: $third;
+        border-radius: 200px 0px 0px 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+
+        h1{
+            text-transform: uppercase;
+            padding: 0.5rem;
+            border-bottom: 2px solid $first;
+            color: $first;
+            width: 15rem;
+            text-align: center;
+        }
+        
+        article{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+            justify-content: center;
+            
+
+            div{
+                animation-name: imgUp;
+                animation-duration: 0.7s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                animation-direction: alternate;
+                height: 10rem;
+                width: 10rem;
+                margin: 1rem;
+                border-radius: 50%;
+                background-color: $first;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                color: $dark;
+                cursor: pointer;
+                transition: all 0.5s;
+                &:hover{
+                    filter: invert(0.8);
+                }
+
+                svg{
+                    font-size: 4rem;
+                }
+                p{
+                    font-size: 900 1rem $text2;
+                }
+            }
+        }
+    }
+}
